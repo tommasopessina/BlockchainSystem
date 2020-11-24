@@ -1,0 +1,24 @@
+---------CONFIG----------------CONFIG--------------CONFIG---------
+module.exports = {
+	networks: {
+		development: {
+		  host: "127.0.0.1",
+		  port: 8543,
+		  from: "0xc7733379aed8f2eee08622a47d26826cdb072793",
+		  network_id: "*" // Match any network id,
+		}
+	},
+compilers: {
+  	solc: {
+		version:"0.5.11",
+		settings: {
+		      evmVersion: "byzantium"
+		    }
+	}
+    }	
+};
+--------------VERSIONI----------------VERSIONI----------------
+solc: 0.5.11
+truffle: v5.0.35
+nodejs: 10.15.2
+npm: 6.12.0

@@ -1,0 +1,763 @@
+{
+  "contractName": "RBACinterface",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_operator",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_role",
+          "type": "uint256"
+        }
+      ],
+      "name": "hasRole",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "testConnection",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getNumRole",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getNumRole\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"testConnection\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_operator\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_role\",\"type\":\"uint256\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/tompe/Scrivania/STAGE/UFFICIAL/dss/contracts/RBACinterface.sol\":\"RBACinterface\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/tompe/Scrivania/STAGE/UFFICIAL/dss/contracts/RBACinterface.sol\":{\"keccak256\":\"0x0340e6a7df268775b86abdfd347edfb53a338c9027cac012cfcd681e67160e0e\",\"urls\":[\"bzz-raw://6ad14da5358b9c7a863a1718cda7235f06f71cacb71a82b6c4e9b03f5429f821\",\"dweb:/ipfs/QmcbU8iMqRyU4YiLxWbHtLf1qXVk8UhpKTQMupZyxT3Lbq\"]},\"/home/tompe/Scrivania/STAGE/UFFICIAL/dss/contracts/Roles.sol\":{\"keccak256\":\"0xbb9b542187eaff9c38c3512d0f4a99dc99b40a13585a027d7cdfacc718ff5583\",\"urls\":[\"bzz-raw://c4fadf5845533515a55474cdcacecc7bca48913221aa2ba9581e32373230d84e\",\"dweb:/ipfs/QmW5zTyjvYzi4kKfrUJXCsMhxb1whgVXZziyBeu3pBhEtZ\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity >=0.4.22 <0.6.0;\r\n \r\nimport \"./Roles.sol\";\r\n \r\ncontract RBACinterface{\r\n     \r\n    enum RoleChoices { setBasic, setMiddle, setTop }\r\n    uint numRole = 3;\r\n     \r\n    function hasRole(address _operator, uint _role) view public returns (bool);\r\n     \r\n    function testConnection() public pure returns (bool);\r\n    \r\n     function getNumRole() public view returns(uint);\r\n     \r\n}\r\n\r\n\r\n",
+  "sourcePath": "/home/tompe/Scrivania/STAGE/UFFICIAL/dss/contracts/RBACinterface.sol",
+  "ast": {
+    "absolutePath": "/home/tompe/Scrivania/STAGE/UFFICIAL/dss/contracts/RBACinterface.sol",
+    "exportedSymbols": {
+      "RBACinterface": [
+        877
+      ]
+    },
+    "id": 878,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 849,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "absolutePath": "/home/tompe/Scrivania/STAGE/UFFICIAL/dss/contracts/Roles.sol",
+        "file": "./Roles.sol",
+        "id": 850,
+        "nodeType": "ImportDirective",
+        "scope": 878,
+        "sourceUnit": 995,
+        "src": "37:21:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 877,
+        "linearizedBaseContracts": [
+          877
+        ],
+        "name": "RBACinterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "RBACinterface.RoleChoices",
+            "id": 854,
+            "members": [
+              {
+                "id": 851,
+                "name": "setBasic",
+                "nodeType": "EnumValue",
+                "src": "118:8:3"
+              },
+              {
+                "id": 852,
+                "name": "setMiddle",
+                "nodeType": "EnumValue",
+                "src": "128:9:3"
+              },
+              {
+                "id": 853,
+                "name": "setTop",
+                "nodeType": "EnumValue",
+                "src": "139:6:3"
+              }
+            ],
+            "name": "RoleChoices",
+            "nodeType": "EnumDefinition",
+            "src": "99:48:3"
+          },
+          {
+            "constant": false,
+            "id": 857,
+            "name": "numRole",
+            "nodeType": "VariableDeclaration",
+            "scope": 877,
+            "src": "153:16:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 855,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "153:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "33",
+              "id": 856,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "168:1:3",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_3_by_1",
+                "typeString": "int_const 3"
+              },
+              "value": "3"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 866,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hasRole",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 862,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 859,
+                  "name": "_operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 866,
+                  "src": "200:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 858,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "200:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 861,
+                  "name": "_role",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 866,
+                  "src": "219:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 860,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "219:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "199:31:3"
+            },
+            "returnParameters": {
+              "id": 865,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 864,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 866,
+                  "src": "252:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 863,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "252:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "251:6:3"
+            },
+            "scope": 877,
+            "src": "183:75:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 871,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testConnection",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 867,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "294:2:3"
+            },
+            "returnParameters": {
+              "id": 870,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 869,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 871,
+                  "src": "318:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 868,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "318:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "317:6:3"
+            },
+            "scope": 877,
+            "src": "271:53:3",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 876,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNumRole",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 872,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "356:2:3"
+            },
+            "returnParameters": {
+              "id": 875,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 874,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 876,
+                  "src": "379:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 873,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "379:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "378:6:3"
+            },
+            "scope": 877,
+            "src": "337:48:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 878,
+        "src": "63:332:3"
+      }
+    ],
+    "src": "0:401:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/tompe/Scrivania/STAGE/UFFICIAL/dss/contracts/RBACinterface.sol",
+    "exportedSymbols": {
+      "RBACinterface": [
+        877
+      ]
+    },
+    "id": 878,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 849,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "absolutePath": "/home/tompe/Scrivania/STAGE/UFFICIAL/dss/contracts/Roles.sol",
+        "file": "./Roles.sol",
+        "id": 850,
+        "nodeType": "ImportDirective",
+        "scope": 878,
+        "sourceUnit": 995,
+        "src": "37:21:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 877,
+        "linearizedBaseContracts": [
+          877
+        ],
+        "name": "RBACinterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "RBACinterface.RoleChoices",
+            "id": 854,
+            "members": [
+              {
+                "id": 851,
+                "name": "setBasic",
+                "nodeType": "EnumValue",
+                "src": "118:8:3"
+              },
+              {
+                "id": 852,
+                "name": "setMiddle",
+                "nodeType": "EnumValue",
+                "src": "128:9:3"
+              },
+              {
+                "id": 853,
+                "name": "setTop",
+                "nodeType": "EnumValue",
+                "src": "139:6:3"
+              }
+            ],
+            "name": "RoleChoices",
+            "nodeType": "EnumDefinition",
+            "src": "99:48:3"
+          },
+          {
+            "constant": false,
+            "id": 857,
+            "name": "numRole",
+            "nodeType": "VariableDeclaration",
+            "scope": 877,
+            "src": "153:16:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 855,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "153:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "33",
+              "id": 856,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "168:1:3",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_3_by_1",
+                "typeString": "int_const 3"
+              },
+              "value": "3"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 866,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hasRole",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 862,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 859,
+                  "name": "_operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 866,
+                  "src": "200:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 858,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "200:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 861,
+                  "name": "_role",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 866,
+                  "src": "219:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 860,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "219:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "199:31:3"
+            },
+            "returnParameters": {
+              "id": 865,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 864,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 866,
+                  "src": "252:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 863,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "252:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "251:6:3"
+            },
+            "scope": 877,
+            "src": "183:75:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 871,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testConnection",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 867,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "294:2:3"
+            },
+            "returnParameters": {
+              "id": 870,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 869,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 871,
+                  "src": "318:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 868,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "318:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "317:6:3"
+            },
+            "scope": 877,
+            "src": "271:53:3",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 876,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNumRole",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 872,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "356:2:3"
+            },
+            "returnParameters": {
+              "id": 875,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 874,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 876,
+                  "src": "379:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 873,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "379:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "378:6:3"
+            },
+            "scope": 877,
+            "src": "337:48:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 878,
+        "src": "63:332:3"
+      }
+    ],
+    "src": "0:401:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.15",
+  "updatedAt": "2020-11-24T12:41:35.840Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
